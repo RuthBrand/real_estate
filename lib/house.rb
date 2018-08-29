@@ -22,7 +22,7 @@ class House
   end
 
   def rooms_from_category(specific_room)
-    @rooms.find_all { |room| room == specific_room }
+    @rooms.find_all { |room| room.symbol == specific_room }
   end
 
   def area

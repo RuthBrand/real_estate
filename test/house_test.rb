@@ -70,7 +70,7 @@ class HouseTest < Minitest::Test
     house.add_room(room_3)
     house.add_room(room_4)
 
-    assert_equal house.specific_rooms, house.rooms_from_category(:basement)
+    assert_equal [room_4], house.rooms_from_category(:basement)
 
   end
 
@@ -87,7 +87,7 @@ class HouseTest < Minitest::Test
     house.add_room(room_3)
     house.add_room(room_4)
 
-    assert_equal house.specific_rooms, house.rooms_from_category(:bedroom)
+    assert_equal [room_1, room_2], house.rooms_from_category(:bedroom)
 
   end
 
