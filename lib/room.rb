@@ -1,7 +1,8 @@
 class Room
-      attr_reader :length,
+    attr_accessor  :length,
                   :width,
-                  :symbol
+                  :symbol,
+                  :area
 
   def initialize(symbol, length, width)
     @symbol = symbol
