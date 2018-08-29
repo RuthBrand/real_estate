@@ -21,16 +21,16 @@ class House
     @rooms << room
   end
 
-  def rooms_from_category(room)
-    room = room
-    if @rooms[0].symbol == room || @rooms[1].symbol == room || @rooms[2].symbol == room || @rooms[3].symbol == room
-    @specific_rooms << room
-    end
+  def rooms_from_category(specific_room)
+    @rooms.find_all { |room| room == specific_room }
   end
-
 
   def area
-    @rooms[0].area + @rooms[1].area + @rooms[2].area + @rooms[3].area
+     @rooms[0].area + @rooms[1].area + @rooms[2].area + @rooms[3].area
   end
+
+  # def price_per_square_foot
+  #   price / area
+  # end
 
 end
